@@ -22,7 +22,7 @@ import { BsPersonFill } from "react-icons/bs";
 
 import logo from "../Images/logo.png";
 
-const Display = () => {
+const Home = () => {
   const [searchInput, setSearchInput] = useState("");
   const [searchingFor, setSearchingFor] = useState("");
   const [gifs, setGifs] = useState([]);
@@ -212,4 +212,4 @@ const Gifs = ({ gifs, searchingFor, setSearchingFor }) => {
   );
 };
 
-export default Display;
+export default Home;
