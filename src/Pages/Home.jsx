@@ -7,8 +7,6 @@ import {
   Grid,
   HStack,
   VStack,
-  List,
-  ListItem,
   Image,
   Input,
   InputGroup,
@@ -82,34 +80,24 @@ const Links = () => (
       <Image src={logo} alt="Giphy logo" />
     </HStack>
 
-    <List>
-      <HStack>
-        <ListItem>
-          <Button variant="nav-links">Reactions</Button>
-        </ListItem>
-        <ListItem>
-          <Button variant="nav-links">Entertainment</Button>
-        </ListItem>
-        <ListItem>
-          <Button variant="nav-links">Sport</Button>
-        </ListItem>
-        <ListItem>
-          <Button variant="nav-links">Stickers</Button>
-        </ListItem>
-        <ListItem>
-          <Button variant="nav-links">Artists</Button>
-        </ListItem>
-        <ListItem>
-          <Button variant="nav-links">
-            <HiDotsVertical fontSize="18px" />
-          </Button>
-        </ListItem>
-      </HStack>
-    </List>
+    <ul>
+      <li>Reactions</li>
+      <li>Entertainment</li>
+      <li>Sport</li>
+      <li>Stickers</li>
+      <li>Artists</li>
+      <li>
+        <HiDotsVertical fontSize="18px" alt="more" />
+      </li>
+    </ul>
 
-    <Button variant="create">Upload</Button>
-    <Button variant="create">Create</Button>
-    <Button variant="log-in">
+    <Button variant="create" label="upload">
+      Upload
+    </Button>
+    <Button variant="create" label="create">
+      Create
+    </Button>
+    <Button variant="log-in" label="login">
       <HStack w="100%" h="100%" justify="flex-start">
         <Flex h="100%" w="36px" bg="grey" justify="center" align="center">
           <BsPersonFill />
@@ -179,7 +167,11 @@ const Gifs = ({ gifs, searchingFor, setSearchingFor }) => {
       <HStack w="100%">
         {searchingFor.length > 0 ? (
           <HStack w="100%" justify="space-between">
-            <Button variant="create" onClick={() => setSearchingFor("")}>
+            <Button
+              variant="create"
+              label="back"
+              onClick={() => setSearchingFor("")}
+            >
               Back
             </Button>
             <h2>Showing results for: {searchingFor}</h2>
@@ -192,11 +184,13 @@ const Gifs = ({ gifs, searchingFor, setSearchingFor }) => {
         )}
       </HStack>
 
-      <Grid templateColumns="repeat(5, 1fr)">
+      <Grid templateColumns="repeat(5, 1fr)" gridGap="10px">
         {gifs.map((gif, index) => (
           <Image
-            h="140px"
-            my="10px"
+            h="100%"
+            w="100%"
+            borderRadius="5px"
+            objectFit="cover"
             key={index}
             src={gif.images.preview_webp.url}
             alt={gif.title}
@@ -205,7 +199,11 @@ const Gifs = ({ gifs, searchingFor, setSearchingFor }) => {
         ))}
       </Grid>
 
-      <Button variant="create" onClick={() => setLoadMore(!loadMore)}>
+      <Button
+        variant="create"
+        label="Show or Hide more"
+        onClick={() => setLoadMore(!loadMore)}
+      >
         <Text>Show {loadMore ? "Less" : "More"}</Text>
       </Button>
     </VStack>

@@ -17,6 +17,19 @@ const theme = extendTheme({
       h2: {
         fontSize: "24px",
       },
+      li: {
+        float: "left",
+        listStyle: "none",
+        height: "40px",
+        fontSize: "14px",
+        px: "12px",
+        py: "10px",
+        mx: "4px",
+        cursor: "pointer",
+        bg: "black",
+        borderBottom: "3px solid blue",
+        _hover: { bg: "blue" },
+      },
     },
   },
   components: {
@@ -27,12 +40,6 @@ const theme = extendTheme({
         borderRadius: "0",
       },
       variants: {
-        "nav-links": {
-          bg: "black",
-          fontSize: "14px",
-          borderBottom: "3px solid blue",
-          _hover: { bg: "blue" },
-        },
         create: {
           bg: "blue",
         },
