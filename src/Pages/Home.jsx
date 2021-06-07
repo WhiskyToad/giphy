@@ -116,6 +116,7 @@ const Search = ({
   setGifs,
   fetchGifs,
 }) => {
+  //checks theres is an input before runing
   const handleClick = () => {
     if (searchInput.length > 0) {
       setSearchingFor(searchInput);

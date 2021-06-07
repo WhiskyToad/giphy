@@ -1,3 +1,20 @@
+Objective: Create a web app which uses a search input and Giphy's API to display giphs on a page.
+
+It should be able to do the following:
+
+    Display trending gifs on app load and display them in a grid
+    Has search functionality for more specific gifs
+    Has a load more button at the bottom of the page which displays more results
+
+About:
+
+It is a React app with Chakra UI for the styling.
+
+Thoughts:
+
+I really like the simple animation of Giphys page, didnt have time to deep dive into recreating that! I also learned there was such a thing as masonry layout, pretty cool
+but also didnt have time to deep dive into that! Overall I quite enjoyed making this, was good to come back and start from scratch again with Chakra since I am a lot more familiar now this is the 3rd project I have done with it. I really like some elements but I am still not fully convinced and I think I'll try a few other things out like bootstrap or tailwind.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
