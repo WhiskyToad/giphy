@@ -13,7 +13,7 @@ It is a React app with Chakra UI for the styling.
 Thoughts:
 
 I really like the simple animation of Giphys page, didnt have time to deep dive into recreating that! I also learned there was such a thing as masonry layout, pretty cool
-but also didnt have time to deep dive into that! Overall I quite enjoyed making this, was good to come back and start from scratch again with Chakra since I am a lot more familiar now this is the 3rd project I have done with it. I really like some elements but I am still not fully convinced and I think I'll try a few other things out like bootstrap or tailwind.
+but also didnt have time to deep dive into that! Overall I quite enjoyed making this, was good to come back and start from scratch again with Chakra since I am a lot more familiar now this is the 3rd project I have done with it. I really like some elements but I am still not fully convinced and I think I'll try a few other things out like bootstrap or tailwind just for a few comparisons of other styling techniques.
 
 # Getting Started with Create React App
 
