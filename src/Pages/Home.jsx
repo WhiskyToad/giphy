@@ -1,24 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 
-import {
-  Flex,
-  Button,
-  Grid,
-  HStack,
-  VStack,
-  Image,
-  Input,
-  InputGroup,
-  InputRightAddon,
-  Spinner,
-  Text,
-} from "@chakra-ui/react";
-import { HiDotsVertical, HiOutlineTrendingUp } from "react-icons/hi";
-import { VscSearch } from "react-icons/vsc";
-import { BsPersonFill } from "react-icons/bs";
+import { Spinner } from "@chakra-ui/react";
 
-import logo from "../Images/logo.png";
+import Links from "../Components/Links";
+import MobileLinks from "../Components/MobileLinks";
+import Search from "../Components/Search";
+import Banner from "../Components/Banner";
+import Gifs from "../Components/Gifs";
 
 const Home = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -37,6 +26,7 @@ const Home = () => {
       const response = await fetch(url, { mode: "cors" });
       const data = await response.json();
       setGifs(data.data);
+      console.log(gifs);
     } catch (error) {
       console.log(error);
     }
@@ -50,11 +40,11 @@ const Home = () => {
   return (
     <>
       <Links />
+      <MobileLinks />
       <Search
         searchInput={searchInput}
         setSearchInput={setSearchInput}
         setSearchingFor={setSearchingFor}
-        setGifs={setGifs}
         fetchGifs={fetchGifs}
       />
       <Banner />
@@ -68,146 +58,6 @@ const Home = () => {
         />
       )}
     </>
-  );
-};
-
-// All the components are down here, if you wished to reuse just create a components folder and put them in there
-
-// top row of nav
-const Links = () => (
-  <HStack w="100%" h="70px" pt="10px" justify="space-between">
-    <HStack w="164px" h="35px">
-      <Image src={logo} alt="Giphy logo" />
-    </HStack>
-
-    <ul>
-      <li>Reactions</li>
-      <li>Entertainment</li>
-      <li>Sport</li>
-      <li>Stickers</li>
-      <li>Artists</li>
-      <li>
-        <HiDotsVertical fontSize="18px" alt="more" />
-      </li>
-    </ul>
-
-    <Button variant="create" label="upload">
-      Upload
-    </Button>
-    <Button variant="create" label="create">
-      Create
-    </Button>
-    <Button variant="log-in" label="login">
-      <HStack w="100%" h="100%" justify="flex-start">
-        <Flex h="100%" w="36px" bg="grey" justify="center" align="center">
-          <BsPersonFill />
-        </Flex>
-        <Text>Log In</Text>
-      </HStack>
-    </Button>
-  </HStack>
-);
-
-// search bar
-const Search = ({
-  searchInput,
-  setSearchInput,
-  setSearchingFor,
-  setGifs,
-  fetchGifs,
-}) => {
-  //checks theres is an input before runing
-  const handleClick = () => {
-    if (searchInput.length > 0) {
-      setSearchingFor(searchInput);
-      fetchGifs();
-    }
-    return;
-  };
-  return (
-    <>
-      <InputGroup>
-        <Input
-          h="52px"
-          type="search"
-          bg="white"
-          color="black"
-          placeholder="Search all of the GIFs"
-          value={searchInput}
-          onChange={(e) => setSearchInput(e.target.value)}
-        />
-        <InputRightAddon
-          h="52px"
-          bg="blue"
-          fontSize="25px"
-          cursor="pointer"
-          children={<VscSearch />}
-          onClick={handleClick}
-        />
-      </InputGroup>
-    </>
-  );
-};
-
-//banner display
-const Banner = () => (
-  <>
-    <Image
-      src="https://media.giphy.com/headers/2021-05-21-22-1621610529/PRIDE_BANNER_HP_2021_v04.gif"
-      alt="All of the Pride Month GIFs!"
-    />
-  </>
-);
-
-//displays the gifs
-const Gifs = ({ gifs, searchingFor, setSearchingFor }) => {
-  const [loadMore, setLoadMore] = useState(false);
-
-  return (
-    <VStack w="100%">
-      <HStack w="100%">
-        {searchingFor.length > 0 ? (
-          <HStack w="100%" justify="space-between">
-            <Button
-              variant="create"
-              label="back"
-              onClick={() => setSearchingFor("")}
-            >
-              Back
-            </Button>
-            <h2>Showing results for: {searchingFor}</h2>
-          </HStack>
-        ) : (
-          <>
-            <HiOutlineTrendingUp color="blue" fontSize="36px" />
-            <h2>Trending</h2>
-          </>
-        )}
-      </HStack>
-
-      <Grid templateColumns="repeat(5, 1fr)" gridGap="10px">
-        {gifs.map((gif, index) => (
-          <Image
-            h="100%"
-            w="100%"
-            borderRadius="5px"
-            objectFit="cover"
-            key={index}
-            src={gif.images.preview_webp.url}
-            alt={gif.title}
-            display={index > 24 && loadMore === false ? "none" : null}
-          />
-        ))}
-      </Grid>
-
-      <Button
-        variant="create"
-        label="Show or Hide more"
-        onClick={() => setLoadMore(!loadMore)}
-      >
-        <Text>Show {loadMore ? "Less" : "More"}</Text>
-      </Button>
-    </VStack>
   );
 };
 

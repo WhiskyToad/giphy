@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <ChakraProvider theme={theme}>
-        <VStack w="1040px" mx="auto" mb="100px">
+        <VStack maxW="1040px" mx="auto" px="10px" mb="100px">
           <Home />
         </VStack>
       </ChakraProvider>
