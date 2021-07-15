@@ -33,7 +33,7 @@ const Search = ({
           onChange={(e) => setSearchInput(e.target.value)}
         />
         <InputRightAddon
-          className="shimmer"
+          id="shimmer"
           h="52px"
           fontSize="25px"
           cursor="pointer"

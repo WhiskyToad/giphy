@@ -52,7 +52,7 @@ const Gifs = ({ gifs, searchingFor, setSearchingFor }) => {
             </ModalBody>
 
             <ModalFooter>
-              <Button className="shimmer" mr={3} onClick={onClose}>
+              <Button id="shimmer" mr={3} onClick={onClose}>
                 Close
               </Button>
             </ModalFooter>
