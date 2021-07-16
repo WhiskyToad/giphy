@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.js": "/giphy/static/js/main.c303cc04.chunk.js",
-    "main.js.map": "/giphy/static/js/main.c303cc04.chunk.js.map",
+    "main.css": "/giphy/static/css/main.571b2de0.chunk.css",
+    "main.js": "/giphy/static/js/main.14c54b3c.chunk.js",
+    "main.js.map": "/giphy/static/js/main.14c54b3c.chunk.js.map",
     "runtime-main.js": "/giphy/static/js/runtime-main.2dca1a51.js",
     "runtime-main.js.map": "/giphy/static/js/runtime-main.2dca1a51.js.map",
-    "static/js/2.908d2a0e.chunk.js": "/giphy/static/js/2.908d2a0e.chunk.js",
-    "static/js/2.908d2a0e.chunk.js.map": "/giphy/static/js/2.908d2a0e.chunk.js.map",
+    "static/js/2.2e41cb90.chunk.js": "/giphy/static/js/2.2e41cb90.chunk.js",
+    "static/js/2.2e41cb90.chunk.js.map": "/giphy/static/js/2.2e41cb90.chunk.js.map",
     "index.html": "/giphy/index.html",
-    "static/js/2.908d2a0e.chunk.js.LICENSE.txt": "/giphy/static/js/2.908d2a0e.chunk.js.LICENSE.txt"
+    "static/css/main.571b2de0.chunk.css.map": "/giphy/static/css/main.571b2de0.chunk.css.map",
+    "static/js/2.2e41cb90.chunk.js.LICENSE.txt": "/giphy/static/js/2.2e41cb90.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2dca1a51.js",
-    "static/js/2.908d2a0e.chunk.js",
-    "static/js/main.c303cc04.chunk.js"
+    "static/js/2.2e41cb90.chunk.js",
+    "static/css/main.571b2de0.chunk.css",
+    "static/js/main.14c54b3c.chunk.js"
   ]
 }
