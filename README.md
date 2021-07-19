@@ -1,87 +1,49 @@
-Objective: Create a web app which uses a search input and Giphy's API to display giphs on a page.
+# <p align="center">**Giphy Clone** </p>
 
-It should be able to do the following:
+<div align="center"> 
+  <a href='https://whiskytoad.github.io/giphy/'>Live Version Here</a>
+  <br>
+  <br>
+</div>
 
-    Display trending gifs on app load and display them in a grid
-    Has search functionality for more specific gifs
-    Has a load more button at the bottom of the page which displays more results
+# <p align="center">Introduction </p>
 
-About:
+This was a challenge set in an interview that I really enjoyed and was a culmination of lots of tutorials and advancement from some of my previous projects. I really tried to apply the DRY principle throughout this and keep my code as clean and simple as possible. Then I came back and further refined it to include as a simple portfolio project. I tried to ensure it was full accessible and hunted down the object response from giphy to try and find the image source to keep the site running fast. (There is A LOT of data and image types in that response!) I really liked their styling, the masonry grid display is something I want to learn and just the shimmering background and things is also something I went into and looked at, their site is very simple but very nice.
 
-It is a React app with Chakra UI for the styling.
+<br>
 
-Thoughts:
+---
 
-I really like the simple animation of Giphys page, didnt have time to deep dive into recreating that! I also learned there was such a thing as masonry layout, pretty cool
-but also didnt have time to deep dive into that! Overall I quite enjoyed making this, was good to come back and start from scratch again with Chakra since I am a lot more familiar now this is the 3rd project I have done with it. I really like some elements but I am still not fully convinced and I think I'll try a few other things out like bootstrap or tailwind just for a few comparisons of other styling techniques.
+# <p align="center">Technology
 
-# Getting Started with Create React App
+### <p align="center">React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Highly popular for a reason and no need to reinvent the wheel here.
 
-## Available Scripts
+### <p align="center">Chakra UI
 
-In the project directory, you can run:
+Something I had used a couple of times by this point, it was really nice to start from scratch and fully utilise it being able to keep my styling clean and simple and make proper use of my theme file.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## <p align="center">Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### <p align="center">List Page
 
-### `npm test`
+![Imgur](https://i.imgur.com/jHUWQZ4.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### <p align="center">Single Item View
 
-### `npm run build`
+![Imgur](https://i.imgur.com/ZljzhFP.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### <p align="center">Search function
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Imgur](https://i.imgur.com/dJ3eMWA.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## <p align="center">Responsive design
 
-### `npm run eject`
+### <p align="center"> List page
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">
+ <img src='https://i.imgur.com/R5zLpA2.png?1'>
+</p>
